@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology in 2025</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Basic styling for demo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #121212;
+      color: #eee;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #222;
+      color: white;
+    }
+    .hero {
+      text-align: center;
+      padding: 20px;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .metadata {
+      font-size: 0.9em;
+      color: gray;
+    }
+    .toc {
+      padding: 15px;
+      background: #f0f0f0;
+    }
+    .toc h3 {
+      margin-bottom: 10px;
+    }
+    .article {
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .gallery img {
+      width: 32%;
+      border-radius: 8px;
+    }
+    .related {
+      padding: 20px;
+      background: #fafafa;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: white;
+      margin-top: 20px;
+    }
+    #theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Tech Today</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=1200" alt="Futuristic Technology">
+    <h2 class="article-title">How Technology is Shaping Our Future</h2>
+    <div class="metadata">
+      <p>By <span class="author">Varshini Oleti</span> • 
+         <span class="date">Sep 20, 2025</span> • 
+         <span id="reading-time"></span></p>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#ai">Artificial Intelligence</a></li>
+      <li><a href="#iot">The Internet of Things</a></li>
+      <li><a href="#future">The Future Ahead</a></li>
+    </ul>
+  </nav>
+
+  <!-- Article Body -->
+  <main class="article">
+    <section id="intro">
+      <h3>Introduction</h3>
+      <p>Technology continues to evolve at a rapid pace. From AI assistants in our homes to self-driving cars on our streets, innovations are reshaping every aspect of daily life. In 2025, the focus is shifting towards smarter, faster, and more sustainable technology.</p>
+    </section>
+
+    <section id="ai">
+      <h3>Artificial Intelligence</h3>
+      <p>AI is no longer just a buzzword—it is powering real-world applications. Personalized learning, automated healthcare systems, and advanced robotics are just a few examples of how AI impacts society.</p>
+      
+      <!-- Image Gallery -->
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600" alt="AI Technology">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600" alt="Smart Devices">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Future Tech">
+      </div>
+    </section>
+
+    <section id="iot">
+      <h3>The Internet of Things</h3>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000" alt="IoT Concept" style="max-width:100%; border-radius:10px; margin:10px 0;">
+      <p>The Internet of Things (IoT) connects devices to share data seamlessly. Smart homes, wearable health monitors, and intelligent traffic systems all depend on IoT technology.</p>
+    </section>
+
+    <section id="future">
+      <h3>The Future Ahead</h3>
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000" alt="Future Technology" style="max-width:100%; border-radius:10px; margin:10px 0;">
+      <p>While technology promises convenience and progress, it also raises concerns like privacy, cybersecurity, and ethical use of AI. The future depends on how responsibly we balance innovation with humanity.</p>
+    </section>
+  </main>
+
+  <!-- Related Articles -->
+  <aside class="related">
+    <h3>Related Articles</h3>
+    <ul>
+      <li><a href="#">The Rise of 5G and Beyond</a></li>
+      <li><a href="#">AI vs Human Jobs: The Debate</a></li>
+      <li><a href="#">Green Tech: Innovations for Sustainability</a></li>
+    </ul>
+  </aside>
+
+  <footer class="footer">
+    <p>&copy; 2025 Tech Today. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Reading Time
+    const text = document.querySelector(".article").innerText;
+    const words = text.trim().split(/\s+/).length;
+    const time = Math.ceil(words / 200); // 200 wpm avg
+    document.getElementById("reading-time").textContent = `${time} min read`;
+
+    // Theme Toggle
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
